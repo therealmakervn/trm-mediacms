@@ -399,12 +399,14 @@ LOGGING = {
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        conn_health_checks=True,
-        ssl_require=True
-    )
+     "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "HOST": "junction.proxy.rlwy.net",
+        "PORT": "12762",
+        "USER": "postgres",
+        "PASSWORD": "mabaOYfZjlpnUJvMnGgxTAdFgzOfuXxx",
+    }
 }
 
 
