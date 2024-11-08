@@ -396,15 +396,15 @@ LOGGING = {
     },
 }
 
+import dj_database_url
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mediacms",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
-        "USER": "mediacms",
-        "PASSWORD": "mediacms",
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        conn_health_checks=True,
+        ssl_require=True
+    )
 }
 
 
