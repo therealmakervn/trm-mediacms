@@ -34,7 +34,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV CELERY_APP='cms'
 
 # Use these to toggle which processes supervisord should run
-ENV ENABLE_UWSGI='no'
+ENV ENABLE_UWSGI='yes'
 ENV ENABLE_NGINX='no'
 ENV ENABLE_CELERY_BEAT='no'
 ENV ENABLE_CELERY_SHORT='no'

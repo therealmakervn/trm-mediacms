@@ -1,0 +1,1 @@
+web: gunicorn mediacms.wsgi:application
