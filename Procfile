@@ -1,1 +1,1 @@
-web: uwsgi --http "0.0.0.0:$PORT" --module mediacms.wsgi:application --virtualenv /home/mediacms.io --master --processes 2 --threads 2
+web: cd mediacms && gunicorn cms.wsgi:application --bind 0.0.0.0:$PORT
